@@ -1,0 +1,364 @@
+/* GLOBAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    /* border: 1px solid red;
+    box-sizing: border-box; */
+}
+
+/* BODY */
+
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+
+/* HEADER */
+.header-container {
+    height: 70x;
+    background-color: black;
+    /* opacity: 80%; */
+    padding: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.6);
+}
+
+.officiallogo  {
+    width: 400px;
+}
+
+.nav-container {
+    display: flex;
+    gap: 15px;
+    button {
+    cursor: pointer;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .officiallogo {
+        flex-direction: column;
+        object-fit: cover;
+        height: 40px;
+    }
+    .nav { flex-direction: column;
+        padding-left: 18%;
+        
+    }
+        
+}
+    
+
+/* END HEADER */
+
+/* FOOTER */
+
+footer {
+    background-color: #121212;
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 30px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+
+}
+
+.socialIcons a:hover i{
+    background-color: white;
+    transition: 0.5s;
+    
+}
+
+.footerNav {
+    margin: 30px 10;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1 ;
+}
+
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+}
+
+/* INDEX PAGE */
+
+.shortbio {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+    padding-left: 5%;
+    padding-right: 5%;
+    /* padding-left: 60%;
+    border: 3px solid black; */
+}
+
+.image-container {
+    height: 75vw;
+    display: inline-flex;
+    border: 5px solid black;
+}
+
+
+.text-container {
+
+    /* height: 30vw; */
+    display: inline-block;
+    flex-flow:column;
+    position:fixed;
+}
+
+@media screen and (max-width:320px) 
+{
+    .image-container{
+        height: 50vw;
+    }
+}
+
+
+/* GIGS PAGE */
+
+.gigsTitle {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+.gigsContainer {
+    display: grid;
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(150px, 1fr)
+    ) ;
+    gap: 32px;
+}
+
+.gigsContainer img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 30px #000;
+}
+
+/* END GIGS PAGE */
+
+/* MEDIA PAGE */
+
+.mediaContainer {
+    display: grid;
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(150px, 1fr)
+    ) ;
+    gap: 32px;
+}
+
+.mediaContainer img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 30px #000;
+}
+
+
+/* BIO PAGE */
+
+#biography {
+    background-color: #121212;
+    display: inline-block;
+    padding-top: 0%;
+    padding-right: 25%;
+    padding-left: 25%;
+    color: white;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+
+/* CONTACT PAGE */
+
+.contact{
+    min-height: 100vh;
+    background: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact form{
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0,0,0,.6);
+    border-radius: 15px;
+    background: whitesmoke;
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact form input {
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #121212;
+}
+
+.contact form input::placeholder{
+    color: black;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.contact form #lastName,
+.contact form #mobile {
+    margin-left: 20px;
+}
+
+.contact form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    color: black;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+textarea::-webkit-scrollbar{
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+
+.contact form #button{
+    border: none;
+    background: black;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color:white;
+    width: 100px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.contact form #button:hover{
+    opacity: 0.7;
+}
+
+.mail-contact{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+
+@media screen and (max-width:320px) 
+{
+    .contactForm{
+        padding: 10%;
+        align-items: center;
+        justify-content: flex-start;
+        object-fit: cover;
+    }
+}
+
+
+/* END CONTACT PAGE */
+
+
+
+
+
+
+
+
+
+
+

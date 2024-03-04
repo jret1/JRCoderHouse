@@ -1,0 +1,25 @@
+.main-index{
+    .image-container {
+        height: 75vw;
+        display: inline-flex;
+        border: 5px solid black;} 
+    .text-container {
+        /* height: 30vw; */
+        display: inline-block;
+        flex-flow:column;
+        position:fixed;   
+        .shortbio {
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            color: black;
+            padding-left: 5%;
+            padding-right: 5%;
+            /* padding-left: 60%;
+            border: 3px solid black; */
+            }
+        }
+    
+}
+
