@@ -7,13 +7,16 @@ footer {
         .socialIcons {
         display: flex;
         justify-content: center;
-        }
             a{
             text-decoration: none;
             padding: 10px;
             background-color: white;
             margin: 10px;
             border-radius: 50%;
+            i{
+                font-size: 2em;
+                color: black;
+                opacity: 0.9;
             &:hover { 
                 background-color: #111;
                 transition: 0.5s;
@@ -22,13 +25,12 @@ footer {
                 background-color: white;
                 transition: 0.5s;
                 }
-                    i{
-                    font-size: 2em;
-                    color: black;
-                    opacity: 0.9;
+
                 }
             }
-        }    
+        }   
+    } 
+
     .footerNav {
         margin: 30px 10;
         ul {
@@ -47,6 +49,11 @@ footer {
                 &:hover {
                     opacity: 1 ;            
                     }
+                &:hover i{
+                    background-color: white;
+                    transition: 0.5s;
+                    
+                }    
                 }
             }
         }
@@ -83,11 +90,11 @@ footer {
 
 // }
 
-.socialIcons a:hover i{
-    background-color: white;
-    transition: 0.5s;
+// .socialIcons a:hover i{
+//     background-color: white;
+//     transition: 0.5s;
     
-}
+// }
 
 // .footerNav {
 //     margin: 30px 10;

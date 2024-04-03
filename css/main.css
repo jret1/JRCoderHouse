@@ -7,36 +7,36 @@
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 h1 {
   text-align: center;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
   font-style: normal;
 }
 
-header .header-container {
-  height: 70x;
+.header {
   background-color: black;
-  /* opacity: 80%; */
-  padding: 1em;
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
 }
-header .header-container .officiallogo {
+.header img {
   width: 400px;
 }
-header .header-container nav .nav-container {
+.header nav ul {
+  list-style: none;
   display: flex;
-  gap: 15px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
 }
-header .header-container nav .nav-container button {
-  cursor: pointer;
+.header nav ul li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .main-index .image-container {
@@ -68,7 +68,7 @@ header .header-container nav .nav-container button {
   font-weight: 500;
   font-style: normal;
 }
-.main-bio .bio-title #biography {
+.main-bio #biography {
   background-color: #121212;
   display: inline-block;
   padding-top: 0%;
@@ -105,17 +105,11 @@ header .header-container nav .nav-container button {
   box-shadow: 0px 0px 30px #000;
 }
 
-.main-contacts .contactTitle {
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-.main-contacts .contactTitle .mail-contact {
+.main-contacts .mail-contact {
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
-.main-contacts .contactTitle .mail-contact .contact {
+.main-contacts .contact {
   min-height: 100vh;
   background: #121212;
   display: flex;
@@ -123,7 +117,7 @@ header .header-container nav .nav-container button {
   align-items: center;
   font-family: "Poppins", sans-serif;
 }
-.main-contacts .contactTitle .mail-contact .contact form {
+.main-contacts .contact form {
   width: 670px;
   height: 400px;
   display: flex;
@@ -136,7 +130,7 @@ header .header-container nav .nav-container button {
   flex-wrap: wrap;
   font-family: "Poppins", sans-serif;
 }
-.main-contacts .contactTitle .mail-contact .contact form input {
+.main-contacts .contact form input {
   width: 290px;
   height: 40px;
   padding-left: 10px;
@@ -147,23 +141,18 @@ header .header-container nav .nav-container button {
   background: none;
   border-bottom: 2px solid #121212;
 }
-
-.contact form input::-moz-placeholder {
+.main-contacts .contact form input ::-moz-placeholder {
   color: black;
   font-family: "Poppins", sans-serif;
 }
-
-.contact form input::placeholder {
+.main-contacts .contact form input ::placeholder {
   color: black;
   font-family: "Poppins", sans-serif;
 }
-
-.contact form #lastName,
-.contact form #mobile {
+.main-contacts .contact form input #lastName, .main-contacts .contact form input #mobile {
   margin-left: 20px;
 }
-
-.contact form textarea {
+.main-contacts .contact form input textarea {
   background: none;
   border: none;
   border-bottom: 2px solid black;
@@ -177,16 +166,13 @@ header .header-container nav .nav-container button {
   min-height: 80px;
   max-height: 80px;
 }
-
-textarea::-webkit-scrollbar {
+.main-contacts .contact form input textarea ::-webkit-scrollbar {
   width: 1em;
 }
-
-textarea::-webkit-scrollbar-thumb {
+.main-contacts .contact form input textarea ::-webkit-scrollbar-thumb {
   background-color: black;
 }
-
-.contact form #button {
+.main-contacts .contact form input textarea #button {
   border: none;
   background: black;
   border-radius: 5px;
@@ -200,6 +186,9 @@ textarea::-webkit-scrollbar-thumb {
   margin-bottom: 30px;
   transition: 0.3s;
 }
+.main-contacts .contact form input textarea #button :hover {
+  opacity: 0.7;
+}
 
 footer {
   background-color: #121212;
@@ -212,25 +201,25 @@ footer .footerContainer .socialIcons {
   display: flex;
   justify-content: center;
 }
-footer .footerContainer a {
+footer .footerContainer .socialIcons a {
   text-decoration: none;
   padding: 10px;
   background-color: white;
   margin: 10px;
   border-radius: 50%;
 }
-footer .footerContainer a:hover {
-  background-color: #111;
-  transition: 0.5s;
-}
-footer .footerContainer a:hover i {
-  background-color: white;
-  transition: 0.5s;
-}
-footer .footerContainer a i {
+footer .footerContainer .socialIcons a i {
   font-size: 2em;
   color: black;
   opacity: 0.9;
+}
+footer .footerContainer .socialIcons a i:hover {
+  background-color: #111;
+  transition: 0.5s;
+}
+footer .footerContainer .socialIcons a i:hover i {
+  background-color: white;
+  transition: 0.5s;
 }
 footer .footerNav {
   margin: 30px 10;
@@ -252,8 +241,35 @@ footer .footerNav ul li a {
 footer .footerNav ul li a:hover {
   opacity: 1;
 }
-
-.socialIcons a:hover i {
+footer .footerNav ul li a:hover i {
   background-color: white;
   transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  .header .officiallogo {
+    display: block;
+    width: 100px;
+    margin-left: 25px;
+  }
+  .header nav ul {
+    flex-direction: column;
+    padding-left: 18%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footerNav ul {
+    flex-direction: column;
+  }
+  ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
+  .main-index .image-container {
+    height: 100vw;
+  }
+  .main-bio .biography {
+    text-align: center;
+  }
 }
