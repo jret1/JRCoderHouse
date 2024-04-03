@@ -5,9 +5,10 @@
   /* box-sizing: border-box; */
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: content-box;
 }
 
 h1 {
@@ -35,31 +36,37 @@ h1 {
 }
 .header nav ul li a {
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   text-decoration: none;
 }
 
-.main-index .image-container {
-  height: 75vw;
-  display: inline-flex;
-  border: 5px solid black;
-}
-.main-index .text-container {
-  /* height: 30vw; */
-  display: inline-block;
-  flex-flow: column;
-  position: fixed;
-}
-.main-index .text-container .shortbio {
+.main-index .shortbio {
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
+  border: 3px solid black;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px #000;
   color: black;
+  padding-top: 1%;
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 2%;
+  margin-left: 3%;
+  margin-right: 3%;
   /* padding-left: 60%;
   border: 3px solid black; */
+}
+.main-index .index-container {
+  margin-left: 4%;
+  margin-right: 2%;
+}
+.main-index .index-container .image-container {
+  height: 55vw;
+  display: inline-flex;
+  border: 3px solid black;
+  box-shadow: 0px 0px 30px #000;
 }
 
 .main-bio .bio-title {
@@ -83,6 +90,8 @@ h1 {
 
 .main-media .mediaContainer {
   display: grid;
+  margin-top: 1%;
+  margin-bottom: 2%;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 32px;
 }
@@ -95,6 +104,8 @@ h1 {
 
 .main-gigs .gigsContainer {
   display: grid;
+  margin-top: 1%;
+  margin-bottom: 2%;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 32px;
 }
@@ -117,7 +128,7 @@ h1 {
   align-items: center;
   font-family: "Poppins", sans-serif;
 }
-.main-contacts .contact form {
+.main-contacts .contact .contactForm {
   width: 670px;
   height: 400px;
   display: flex;
@@ -130,7 +141,7 @@ h1 {
   flex-wrap: wrap;
   font-family: "Poppins", sans-serif;
 }
-.main-contacts .contact form input {
+.main-contacts .contact .contactForm input {
   width: 290px;
   height: 40px;
   padding-left: 10px;
@@ -141,21 +152,24 @@ h1 {
   background: none;
   border-bottom: 2px solid #121212;
 }
-.main-contacts .contact form input ::-moz-placeholder {
+.main-contacts .contact .contactForm input::-moz-placeholder {
   color: black;
   font-family: "Poppins", sans-serif;
 }
-.main-contacts .contact form input ::placeholder {
+.main-contacts .contact .contactForm input::placeholder {
   color: black;
   font-family: "Poppins", sans-serif;
 }
-.main-contacts .contact form input #lastName, .main-contacts .contact form input #mobile {
+.main-contacts .contact .contactForm input #lastName {
   margin-left: 20px;
 }
-.main-contacts .contact form input textarea {
+.main-contacts .contact .contactForm input #mobile {
+  margin-left: 20px;
+}
+.main-contacts .contact .contactForm textarea {
   background: none;
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 3px solid black;
   color: black;
   font-weight: 200;
   font-size: 15px;
@@ -166,13 +180,13 @@ h1 {
   min-height: 80px;
   max-height: 80px;
 }
-.main-contacts .contact form input textarea ::-webkit-scrollbar {
+.main-contacts .contact .contactForm textarea::-webkit-scrollbar {
   width: 1em;
 }
-.main-contacts .contact form input textarea ::-webkit-scrollbar-thumb {
+.main-contacts .contact .contactForm textarea::-webkit-scrollbar-thumb {
   background-color: black;
 }
-.main-contacts .contact form input textarea #button {
+.main-contacts .contact .contactForm #button {
   border: none;
   background: black;
   border-radius: 5px;
@@ -182,54 +196,51 @@ h1 {
   color: white;
   width: 100px;
   padding: 0;
-  margin-right: 500px;
+  margin-right: 10px;
   margin-bottom: 30px;
   transition: 0.3s;
 }
-.main-contacts .contact form input textarea #button :hover {
+.main-contacts .contact .contactForm #button:hover {
   opacity: 0.7;
 }
 
 footer {
   background-color: #121212;
 }
-footer .footerContainer {
-  width: 100%;
-  padding: 30px 30px 20px;
-}
-footer .footerContainer .socialIcons {
+footer .socialIcons {
   display: flex;
   justify-content: center;
 }
-footer .footerContainer .socialIcons a {
+footer .socialIcons a {
   text-decoration: none;
   padding: 10px;
   background-color: white;
   margin: 10px;
   border-radius: 50%;
 }
-footer .footerContainer .socialIcons a i {
+footer .socialIcons a i {
   font-size: 2em;
   color: black;
   opacity: 0.9;
 }
-footer .footerContainer .socialIcons a i:hover {
+footer .socialIcons a i:hover {
   background-color: #111;
   transition: 0.5s;
 }
-footer .footerContainer .socialIcons a i:hover i {
+footer .socialIcons a i:hover i {
   background-color: white;
   transition: 0.5s;
 }
-footer .footerNav {
+
+.footerNav {
   margin: 30px 10;
 }
-footer .footerNav ul {
+.footerNav ul {
   display: flex;
   justify-content: center;
   list-style-type: none;
 }
-footer .footerNav ul li a {
+.footerNav ul li a {
   color: white;
   margin: 20px;
   text-decoration: none;
@@ -238,20 +249,15 @@ footer .footerNav ul li a {
   opacity: 0.7;
   transition: 0.5s;
 }
-footer .footerNav ul li a:hover {
+.footerNav ul li a:hover {
   opacity: 1;
 }
-footer .footerNav ul li a:hover i {
+.footerNav ul li a:hover i {
   background-color: white;
   transition: 0.5s;
 }
 
 @media screen and (max-width: 768px) {
-  .header .officiallogo {
-    display: block;
-    width: 100px;
-    margin-left: 25px;
-  }
   .header nav ul {
     flex-direction: column;
     padding-left: 18%;
@@ -262,14 +268,19 @@ footer .footerNav ul li a:hover i {
     flex-direction: column;
   }
   ul li {
-    width: 100%;
+    width: 70%;
     text-align: center;
-    margin: 10px;
+    margin: 1px;
+    margin-right: 10px;
   }
   .main-index .image-container {
-    height: 100vw;
+    height: 60vh;
   }
   .main-bio .biography {
     text-align: center;
+  }
+  .contact-form {
+    width: 350px;
+    height: 200px;
   }
 }

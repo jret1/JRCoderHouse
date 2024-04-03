@@ -1,9 +1,6 @@
 
 footer {
     background-color: #121212;
-    .footerContainer {
-        width: 100%;
-        padding: 30px 30px 20px;
         .socialIcons {
         display: flex;
         justify-content: center;
@@ -25,7 +22,6 @@ footer {
                 background-color: white;
                 transition: 0.5s;
                 }
-
                 }
             }
         }   
@@ -58,7 +54,7 @@ footer {
             }
         }
     }   
-}
+
 
 // .footerContainer {
 //     width: 100%;
