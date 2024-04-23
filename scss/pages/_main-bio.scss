@@ -1,12 +1,12 @@
 .main-bio {
     .bio-title {
         text-align: center;
-        font-family: "Poppins", sans-serif;
+        font-family:  "Poppins", sans-serif;
         font-weight: 500;
         font-style: normal;}
         
     #biography {
-        background-color: #121212;
+        background-color: $color-primario;
         display: inline-block;
         padding-top: 0%;
         padding-right: 25%;

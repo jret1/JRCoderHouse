@@ -7,6 +7,7 @@
         font-family: "Poppins", sans-serif;
         img {
             width: 400px;
+            cursor: pointer;
         }
         nav ul {
             list-style: none;
@@ -17,6 +18,14 @@
             color: white;
             font-size: 15px;
             text-decoration: none;
+            opacity: 0.7;
+            transition: 0.5s;
+            &:hover {
+                opacity: 1 ;            
+                }
+            &:hover i{
+                background-color: white;
+                transition: 0.5s;}
             }
         }
     }
